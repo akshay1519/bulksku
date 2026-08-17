@@ -20,10 +20,25 @@ index.html                    ← entire site (single file, no dependencies)
 README.md
 ```
 
-## Before you publish
+## Before you publish — two gated phases
 
-1. **Get a Lemon Squeezy checkout URL** for a $39 product.
-2. In `index.html`, find the line:
+### Phase A — Do this now (free, no product needed)
+
+1. Create a [Lemon Squeezy](https://lemonsqueezy.com) **account and store**.
+   This is free and takes a few minutes. Familiarise yourself with how products
+   and checkout links work, but **do not create a product yet**.
+2. Review the four wording TODOs marked `<!-- TODO(activation) -->` in
+   `index.html` — they need a final pass when the refund policy and pricing
+   are confirmed.
+
+### Phase B — Only after a deliverable exists
+
+> ⚠️ Do not proceed until the plugin is built, tested, and ready to ship.
+> Setting up a live payment for a product that doesn't exist yet is misleading.
+
+1. Create a **$39 one-time product** in Lemon Squeezy and copy its checkout URL.
+2. Confirm and document your refund policy, then update the FAQ in `index.html`.
+3. In `index.html`, find the line:
    ```js
    const CHECKOUT_URL = null;
    ```
@@ -31,8 +46,8 @@ README.md
    ```js
    const CHECKOUT_URL = "https://your-store.lemonsqueezy.com/buy/your-product-id";
    ```
-3. **Enable GitHub Pages** in repo Settings → Pages → Source: GitHub Actions.
-4. Push to `main`. The workflow deploys automatically.
+4. **Enable GitHub Pages** in repo Settings → Pages → Source: GitHub Actions.
+5. Push to `main`. The workflow deploys automatically.
 
 ## Development
 
